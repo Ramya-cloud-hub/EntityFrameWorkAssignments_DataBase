@@ -27,7 +27,7 @@ namespace WebAppAssignmentDATABASE_5.Models
         [MaxLength(15)]
         [MinLength(1)]
         public City PersonCity { get; set; }
-        public object City { get; internal set; }
+     //   public object City { get;  set; }
 
         public Person(int PersonId, string PersonName, string PersonPhoneNumber, string PersonCity)
         {

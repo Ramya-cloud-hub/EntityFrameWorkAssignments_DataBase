@@ -41,7 +41,7 @@ namespace WebAppAssignmentDATABASE_5.Models.Repo
             _exDbContext.Cities.Remove(city);
             int deletedNoOfCities = _exDbContext.SaveChanges(); // going to return 1 if deleted
 
-            bool deletedCity = false;
+            bool deletedCity;
             if (deletedNoOfCities == 1)
             {
                 deletedCity = true;

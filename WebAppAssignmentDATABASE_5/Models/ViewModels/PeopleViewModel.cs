@@ -13,10 +13,10 @@ namespace WebAppAssignmentDATABASE_5
     {
         public List<Person> PeopleListView { get; set; }
 
-        public string FilterString { get; set; }
+       public string FilterString { get; set; }
 
         public string SearchResultEmpty { get; set; }
-        public static object FilterText { get; internal set; }
+        public string FilterText { get; set; }
 
         public PeopleViewModel()
         {

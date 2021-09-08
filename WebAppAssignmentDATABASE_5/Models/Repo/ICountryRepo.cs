@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace WebAppAssignmentDATABASE_5.Models.Repo
 {
-    interface ICountryRepo
+  public interface ICountryRepo
     {
         City AddCityToCountry(int id, City city);
 
-        Country CreateCountry(string name);
-        List<Country> ReadCountry();
+        Country Create(string name);
+        List<Country> Read();
 
-        Country ReadCountry(int id);
+        Country Read(int id);
 
-        Country UpdateCountry(Country country);
+        Country Update(Country country);
 
         bool Delete(Country country);
     }

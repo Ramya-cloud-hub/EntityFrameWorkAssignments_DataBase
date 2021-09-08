@@ -46,7 +46,7 @@ namespace WebAppAssignmentDATABASE_5.Models
                 {
                     item.PersonName = person.PersonName;
                     item.PersonPhoneNumber = person.PersonPhoneNumber;
-                    //item.PersonCity = person.PersonCity;
+                    item.PersonCity = person.PersonCity;
                 }
             }
             return person;

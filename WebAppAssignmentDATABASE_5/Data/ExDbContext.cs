@@ -8,24 +8,20 @@ namespace WebAppAssignmentDATABASE_5.Models
 {
     public class ExDbContext : DbContext
     {
-        private string v;
 
-        public ExDbContext(DbContextOptions<ExDbContext> options) :base(options)
-        {
 
-        }
+        public ExDbContext(DbContextOptions<ExDbContext> options) : base(options) { }
+        
 
-        public ExDbContext(string v)
-        {
-            this.v = v;
-        }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            base.OnModelCreating(modelBuilder);
+            
         }
         public DbSet<Person> Peoples { get; set; }
-       // public DbSet<Country> Country { get; set; }
+        public DbSet<Country> Countries{ get; set; }
         public DbSet<City> Cities { get; set; }
 
     }

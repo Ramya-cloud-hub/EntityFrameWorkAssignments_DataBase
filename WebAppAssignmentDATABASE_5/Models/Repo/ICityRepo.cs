@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebAppAssignmentDATABASE_5.Models.Repo
 {
-    interface ICityRepo
+  public interface ICityRepo
     {
 
         Person AddPersonCity(int id, Person person);

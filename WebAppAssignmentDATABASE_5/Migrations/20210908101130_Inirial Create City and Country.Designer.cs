@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAppAssignmentDATABASE_5.Models;
 
 namespace WebAppAssignmentDATABASE_5.Migrations
 {
     [DbContext(typeof(ExDbContext))]
-    partial class ExDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210908101130_Inirial Create City and Country")]
+    partial class InirialCreateCityandCountry
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

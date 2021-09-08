@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace WebAppAssignmentDATABASE_5.Models.ViewModels
 {
-    public class CountryViewModel
+    public class CityViewModel
     {
         public string FilterText { get; set; }
 
-        public List<Country> CountryLists { get; set; }
+        public List<City> CityLists { get; set; }
     }
 }

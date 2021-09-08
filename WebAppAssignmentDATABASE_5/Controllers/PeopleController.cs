@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebAppAssignmentDATABASE_5.Models;
+using WebAppAssignmentDATABASE_5.Models.Service;
 using WebAppAssignmentDATABASE_5.Models.ViewModel;
 
 namespace WebAppAssignmentDATABASE_5.Controllers
@@ -12,11 +13,17 @@ namespace WebAppAssignmentDATABASE_5.Controllers
     {
 
        private readonly IPeopleService _peopleService;
-       
+        ICityService _cityService;
+        ExDbContext _exContext;
+
+
+
         //Dependency Injection to the constructor
-        public PeopleController(IPeopleService peopleService)
+        public PeopleController(IPeopleService peopleService , ICityService cityService, ExDbContext exContext)
         { 
             _peopleService = peopleService;
+            _cityService = cityService;
+            _exContext = exContext;
         }
 
 
