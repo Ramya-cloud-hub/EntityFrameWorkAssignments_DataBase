@@ -27,21 +27,25 @@ namespace WebAppAssignmentDATABASE_5.Models
         [MaxLength(15)]
         [MinLength(1)]
         public City PersonCity { get; set; }
-     //   public object City { get;  set; }
+        //public object City { get;  set; }
+
+        [Required]
+        public List<PersonLanguage> KnownLanguageList { get; set; }
 
         public Person(int PersonId, string PersonName, string PersonPhoneNumber, string PersonCity)
         {
-           // this.PersonId = PersonId;
+           this.PersonId = PersonId;
             this.PersonName = PersonName;
            this.PersonPhoneNumber = PersonPhoneNumber;
-            
+            KnownLanguageList = new List<PersonLanguage>();
+
         }
         public Person(string PersonName, string PersonPhoneNumber)
         { 
             this.PersonName = PersonName;
             this.PersonPhoneNumber = PersonPhoneNumber;
-            
-        }
+            KnownLanguageList = new List<PersonLanguage>();
 
+        }
     }
 }

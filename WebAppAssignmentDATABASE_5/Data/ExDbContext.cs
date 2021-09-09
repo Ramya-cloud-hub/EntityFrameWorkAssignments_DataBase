@@ -24,5 +24,7 @@ namespace WebAppAssignmentDATABASE_5.Models
         public DbSet<Country> Countries{ get; set; }
         public DbSet<City> Cities { get; set; }
 
+        public DbSet<Language> Languages { get; set; }
+
     }
 }
