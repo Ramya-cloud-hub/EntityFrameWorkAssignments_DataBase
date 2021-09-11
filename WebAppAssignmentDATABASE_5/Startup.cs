@@ -29,6 +29,10 @@ namespace WebAppAssignmentDATABASE_5
             services.AddScoped<IPeopleRepo, DatabasePeopleRepo>();
             services.AddScoped<ICityRepo, CityRepo>();
             services.AddScoped<ICityService, CityService>();
+            services.AddScoped<ICountryService, CountryService>();
+            services.AddScoped<ICountryRepo, CountryRepo>();
+            services.AddScoped<ILanguageService, LanguageService>();
+            services.AddScoped<ILanguageRepo, LanguageRepo>();
 
             
             services.AddControllersWithViews();

@@ -13,7 +13,7 @@ namespace WebAppAssignmentDATABASE_5.Models
 
         public Person Create(string PersonName, string PersonPhoneNumber, string PersonCity)
         {
-            Person newPerson = new Person(_idCounter, PersonName, PersonPhoneNumber, PersonCity);
+            Person newPerson = new Person(_idCounter, PersonName, PersonPhoneNumber);
             _idCounter++;
             _personList.Add(newPerson);
             return newPerson;
@@ -40,26 +40,27 @@ namespace WebAppAssignmentDATABASE_5.Models
 
         public Person Update(Person person)
         {
-            foreach(Person item in _personList)
+            foreach (Person item in _personList)
             {
-                if(item.PersonId == person.PersonId)
+                if (item.PersonId == person.PersonId)
                 {
                     item.PersonName = person.PersonName;
-                    item.PersonPhoneNumber = person.PersonPhoneNumber;
+                    item.PersonPhoneNumber= person.PersonPhoneNumber;
                     item.PersonCity = person.PersonCity;
                 }
             }
+
             return person;
         }
         public void CreateBasePersons()
           {
-            InMemoryPeopleRepo pDataBase = new InMemoryPeopleRepo();
-            pDataBase.Create("Ramya Talagavadi Kalegowda", "08236 75578", "Bengalore");
-            pDataBase.Create("Rekha Gowda", "0¨989 897657 ", "Bengalore");
-            pDataBase.Create("Sowmya Sri", "0888 469879", "Malmö");
-            pDataBase.Create("Naga chithanya Sri", "0888 469879", "Malmö");
-            pDataBase.Create("Saranya", "0888 469879", "Malmö");
-            pDataBase.Create("Vijaya", "0888 469879", "Malmö");
+            InMemoryPeopleRepo personDataBase = new InMemoryPeopleRepo();
+            personDataBase.Create("Ramya Talagavadi Kalegowda", "08236 75578", "Bengalore");
+            personDataBase.Create("Rekha Gowda", "0¨989 897657 ", "Bengalore");
+            personDataBase.Create("Sowmya Sri", "0888 469879", "Malmö");
+            personDataBase.Create("Naga chithanya Sri", "0888 469879", "Malmö");
+            personDataBase.Create("Saranya", "0888 469879", "Malmö");
+            personDataBase.Create("Vijaya", "0888 469879", "Malmö");
 
         }
     }

@@ -41,6 +41,7 @@ namespace WebAppAssignmentDATABASE_5.Controllers
             if (peopleList.PeopleListView.Count == 0 || peopleList.PeopleListView == null)
             {
                 makeBaseList.CreateBasePersons();
+                Console.WriteLine(peopleList);
             }
 
             return View(peopleList);

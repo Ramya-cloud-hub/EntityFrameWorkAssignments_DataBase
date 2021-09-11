@@ -24,11 +24,11 @@
                 <br />
                 <br />
                 <input type="submit" class="btn btn-primary" name="btnFilter" value="Search" />
-                  <br />
-                  <br />
+                <br />
+                <br />
                 <input type="button" class="btn btn-primary" name="btnReset" value="Reset Search" onClick="location.href='@Url.Action("Index", "People")'" />
             </form>
-          
+
         </div>
 
         <div>
@@ -52,7 +52,13 @@
                     <br />
                     <input asp-for="PersonCity" />
                     <br />
-                    <span id="redtext" asp-validation-for="PersonCity"></span>
+                    <span id="redtext" asp-validation-for="@Model.selectList"></span>
+                    <br />
+                    <label asp-for="PersonLanguage"></label>
+                    <br/>
+                    <input asp-for="PersonLanguage" />
+                    <br />
+                    <span id="redtext" asp-validation-for="@Model.selectList"></span>
                     <br />
                 </div>
                 <div>
@@ -60,8 +66,13 @@
                 </div>
             </form>
         </div>
-    </div> 
+    </div>
 
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <br />
     <div>
         <table class="table table-dark">
@@ -71,6 +82,7 @@
                     <th>NAME</th>
                     <th>PhoneNumber </th>
                     <th>City </th>
+                    <th>Language</th>
                     <th>Options </th>
                 </tr>
                 <tr>
@@ -78,9 +90,12 @@
                     <th></th>
                     <th></th>
                     <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
+                InMemoryPeopleRepo memory = new InMemoryPeipleRepo();
+                memory.CreateBasePersons();
 
                 @foreach (var item in Model.PeopleListView)
                 {
@@ -88,6 +103,7 @@
                         <td>@item.PersonName</td>
                         <td>@item.PersonPhoneNumber</td>
                         <td>@item.PersonCity</td>
+                        <td></td>
                         <td><a href="#" onClick="location.href='@Url.Action("DeletePerson", "People", new { id = @item.PersonId })'">Delete</a></td>
                     </tr>
                 }

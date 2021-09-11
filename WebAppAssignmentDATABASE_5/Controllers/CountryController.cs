@@ -13,7 +13,7 @@ namespace WebAppAssignmentDATABASE_5.Controllers
 
 
         //Dependency injectin Entity Framework
-        ICountryService _countyService;
+       ICountryService _countyService;
         ExDbContext _exContext;
 
         public CountryController(ICountryService countryService, ExDbContext exContext)
